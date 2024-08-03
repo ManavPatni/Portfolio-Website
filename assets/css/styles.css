@@ -177,7 +177,7 @@ img {
   .nav__menu{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     background-color: hsla(var(--hue), 70%, 4%, .2);
     backdrop-filter: blur(16px);
     --webkit-backdrop-filter: blur(16px);
@@ -201,10 +201,35 @@ img {
   transition: color .4s;
 }
 
+.nav__link::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--first-color-light);
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  transition: width .3s;
+}
 
+.nav__link:hover{
+  color: var(--first-color-light);
+}
+
+.nav__link:hover::after{
+  width: 100%;
+}
+
+.nav__close{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
 
 /* Show menu */
-
+.show-menu{
+  right: 0;
+}
 
 /* Add blur header */
 
