@@ -777,7 +777,7 @@ img {
   }
 
   .home__container{
-    height: 820px;
+    height: 750px;
     grid-template-columns: 375px 350px;
     gap: 3rem 16rem;
   }
